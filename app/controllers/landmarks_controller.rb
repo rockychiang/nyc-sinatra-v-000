@@ -10,10 +10,10 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
-    @figure = Figure.new(params[:figure])
-    @figure.titles.build(params[:title]) if !params[:title][:name].empty?
-    @figure.landmarks.build(params[:landmark]) if !params[:landmark][:name].empty?
-    @figure.save
+    @landmark = Figure.new(params[:figure])
+    @landmark.titles.build(params[:title]) if !params[:title][:name].empty?
+    @landmark.landmarks.build(params[:landmark]) if !params[:landmark][:name].empty?
+    @landmark.save
     redirect "/figures"
   end
 
