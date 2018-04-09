@@ -8,6 +8,8 @@ class FiguresController < ApplicationController
     erb :"/figures/new"
   end
 
-  get '/figures/'
+  get '/figures/:id' do
+
+  end
 
 end
