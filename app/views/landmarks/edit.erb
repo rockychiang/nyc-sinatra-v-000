@@ -1,5 +1,5 @@
 <h1>Edit Landmark</h1>
-<form action="/landmarks" method="post">
+<form action="/landmarks/<%=@landmark.id%>" method="post">
   <p>
     <label for="landmark_name">Name: </label>
     <input id="landmark_name" name="landmark[name]" type="text">
