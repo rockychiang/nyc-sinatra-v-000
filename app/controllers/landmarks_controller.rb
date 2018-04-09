@@ -28,8 +28,6 @@ class LandmarksController < ApplicationController
   post '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
-    @landmark.titles.build(params[:title]) if !params[:title][:name].empty?
-    @landmark.landmarks.build(params[:landmark]) if !params[:landmark][:name].empty?
     @landmark.save
     redirect "/landmarks/#{@landmark.id}"
   end
