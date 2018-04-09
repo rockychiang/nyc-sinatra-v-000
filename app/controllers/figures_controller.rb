@@ -9,7 +9,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-
+    @figure = Figure.new(params)
   end
 
   get '/figures/:id' do
