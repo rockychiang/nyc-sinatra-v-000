@@ -18,17 +18,17 @@ class LandmarksController < ApplicationController
   end
 
   get '/figures/:id' do
-    @landmark = Figure.find(params[:id])
+    @landmark = Landmark.find(params[:id])
     erb :"/figures/show"
   end
 
   get '/figures/:id/edit' do
-    @landmark = Figure.find(params[:id])
+    @landmark = Landmark.find(params[:id])
     erb :"/figures/edit"
   end
 
   post '/figures/:id' do
-    @landmark = Figure.find(params[:id])
+    @landmark = Landmark.find(params[:id])
     @landmark.update(params[:figure])
     @landmark.titles.build(params[:title]) if !params[:title][:name].empty?
     @landmark.landmarks.build(params[:landmark]) if !params[:landmark][:name].empty?
