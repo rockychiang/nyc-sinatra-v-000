@@ -10,7 +10,7 @@ class LandmarksController < ApplicationController
   end
 
   post '/landmarks' do
-    @landmark = Landmark.new(params[:figure])
+    @landmark = Landmark.new(params[:landmark])
     @landmark.titles.build(params[:title]) if !params[:title][:name].empty?
     @landmark.landmarks.build(params[:landmark]) if !params[:landmark][:name].empty?
     @landmark.save
