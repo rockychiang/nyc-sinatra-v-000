@@ -10,6 +10,8 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Figure.new(params[:figure])
+    @figure.save
+    redirect "/figures"
   end
 
   get '/figures/:id' do
