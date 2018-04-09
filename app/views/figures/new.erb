@@ -6,7 +6,7 @@
   </p>
   <p>Title:
     <% Title.all.each do |title| %>
-      <input type="radio" name="figure[title_ids][]"><%=title.name%>
+      <input type="checkbox" name="figure[title_ids][]"><%=title.name%>
     <% end %>
   </p>
   <p>
