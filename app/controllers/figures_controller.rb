@@ -10,7 +10,7 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Figure.new(params[:figure])
-    pry
+    binding.pry
     @figure.save
     redirect "/figures"
   end
