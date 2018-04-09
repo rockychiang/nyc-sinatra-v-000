@@ -5,7 +5,7 @@
     <input id="figure_name" name="figure[name]" type="text">
   </p>
   <% Landmark.all.each do |landmark| %>
-    <input type="checkbox" name="figure[landmark_ids][]"
+    <input type="checkbox" name="figure[landmark_ids][]">landmark.name
   <% end %>
   <input type="submit" value="Create New Figure">
 </form>
