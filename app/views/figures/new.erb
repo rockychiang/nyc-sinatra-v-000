@@ -8,6 +8,8 @@
   <% Landmark.all.each do |landmark| %>
     <input type="checkbox" name="figure[landmark_ids][]"><%=landmark.name%>
   <% end %>
-  <label for="new_landmark"
+  <p>
+    <label for="new_landmark">Or create a new landmark: </label>
+    <input id="new_landmark" type="text">
   <input type="submit" value="Create New Figure">
 </form>
