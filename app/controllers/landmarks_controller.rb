@@ -14,7 +14,7 @@ class LandmarksController < ApplicationController
     @landmark.titles.build(params[:title]) if !params[:title][:name].empty?
     @landmark.landmarks.build(params[:landmark]) if !params[:landmark][:name].empty?
     @landmark.save
-    redirect "/figures"
+    redirect "/landmarks"
   end
 
   get '/figures/:id' do
