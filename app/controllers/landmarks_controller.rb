@@ -29,7 +29,7 @@ class LandmarksController < ApplicationController
 
   post '/figures/:id' do
     @landmark = Landmark.find(params[:id])
-    @landmark.update(params[:figure])
+    @landmark.update(params[:landmark])
     @landmark.titles.build(params[:title]) if !params[:title][:name].empty?
     @landmark.landmarks.build(params[:landmark]) if !params[:landmark][:name].empty?
     @landmark.save
