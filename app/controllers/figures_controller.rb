@@ -9,7 +9,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    raise params.inspect
+    binding.pry
     @figure = Figure.new(params)
   end
 
