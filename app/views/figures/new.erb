@@ -4,10 +4,11 @@
     <label for="figure_name">Name: </label>
     <input id="figure_name" name="figure[name]" type="text">
   </p>
-  <p>Title: </p>
-  <% Title.all.each do |title| %>
-    <input type="checkbox" name="figure[title_ids][]"><%=title.name%>
-  <% end %>
+  <p>Title: 
+    <% Title.all.each do |title| %>
+      <input type="checkbox" name="figure[title_ids][]"><%=title.name%>
+    <% end %>
+  </p>
   <p>
     <label for="new_title">Or create a new title: </label>
     <input id="new_title" name="title[name]" type="text">
