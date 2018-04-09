@@ -10,8 +10,8 @@ class FiguresController < ApplicationController
 
   post '/figures' do
     @figure = Figure.new(params[:figure])
-    if !params[:title][:name].empty?
-      @figure.titles.build(params[:title])
+    @figure.titles.build(params[:title]) if !params[:title][:name].empty?
+      
     @figure.save
     redirect "/figures"
   end
